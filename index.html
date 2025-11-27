@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Dream - Layanan Skincare Terpercaya</title>
+    <meta name="description" content="Skincare Dream menyediakan layanan skincare terbaik dengan produk lengkap untuk perawatan kulit wajah dan tubuh.">
+    <!-- Added Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Internal CSS with harmonized color palette: Teal (#3c8884), Cyan (#52cfe6), Light Gray (#f4f4f4), Dark Teal (#2c5f5d) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;  /* Light gray for neutral background */
+        }
+
+        header {
+            background: linear-gradient(45deg, #3c8884, #52cfe6);  /* Harmonized teal-cyan gradient */
+            text-align: center;
+            padding: 20px 0;
+            color: #ffffff;  /* White for contrast */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        nav {
+            background-color: #52cfe6;  /* Solid cyan for harmony */
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c5f5d;  /* Dark teal for text */
+            margin: 0 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+            color: #ffffff;  /* White on hover for contrast */
+            font-weight: bolder;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+            height: 400px;
+            color: #ffffff;  /* White text for better readability on image */
+            text-shadow: 2px 2px 4px #000000;
+            background: url("https://i.pinimg.com/736x/99/07/57/990757917a29ca23e92630ea05ac6151.jpg") no-repeat center center/cover;  /* Gambar produk skincare */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(60, 136, 132, 0.4);  /* Teal overlay for harmony */
+            border-radius: 10px;
+        }
+
+        .hero h2 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .about {
+            background-color: #ffffff;
+            padding: 40px 0;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service {
+            flex: 1;
+            min-width: 250px;
+            background: linear-gradient(135deg, #3c8884, #52cfe6);  /* Consistent teal-cyan gradient */
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #ffffff;  /* White text for contrast */
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .service i {
+            font-size: 3em;
+            color: #ffffff;  /* White icons */
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonials {
+            background-color: #ffffff;  /* White background for contrast */
+            padding: 40px 0;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial {
+            text-align: center;
+            margin: 20px;
+            font-style: italic;
+            color: #2c5f5d;  /* Dark teal text */
+        }
+
+        .faq {
+            background-color: #f4f4f4;
+            padding: 40px 0;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .faq h3 {
+            color: #2c5f5d;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #3c8884;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #52cfe6;
+        }
+
+        @media (max-width: 768px) {
+            .services {
+                flex-direction: column;
+            }
+            .gallery img {
+                width: 100%;
+            }
+            .hero {
+                font-size: 24px;
+                height: 300px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+
+        footer {
+            text-align: center;
+            background: #2c5f5d;  /* Dark teal for footer */
+            color: #ffffff;  /* White text */
+            padding: 20px 0;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        footer::before {
+            content: "🌟";
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang Di Skincare Dream</h1>
+    </header>
+    <nav>
+        <a href="#beranda"><i class="fas fa-home"></i> Beranda</a>
+        <a href="#tentang"><i class="fas fa-info-circle"></i> Tentang Kami</a>
+        <a href="#layanan"><i class="fas fa-concierge-bell"></i> Layanan</a>
+        <a href="#galeri"><i class="fas fa-images"></i> Galeri</a>
+        <a href="#kontak"><i class="fas fa-envelope"></i> Kontak</a>
+    </nav>
+    <section class="hero" id="beranda">
+        <h2>Selamat Datang Di Skincare Dream</h2>
+    </section>
+    <section class="about container" id="tentang">
+        <h2 style="text-align: center;"><i class="fas fa-heart"></i> Tentang Kami</h2>
+        <p>Skincare Dream adalah brand terpercaya yang menyediakan produk skincare alami dan efektif untuk semua jenis kulit. Kami berkomitmen untuk memberikan perawatan kulit yang aman, inovatif, dan terjangkau. Dengan bahan-bahan pilihan, kami membantu Anda mencapai kulit impian.</p>
+    </section>
+    <section class="container" id="layanan">
+        <h2 style="text-align: center;"><i class="fas fa-star"></i> Layanan Kami <i class="fas fa-star"></i></h2>
+        <div class="services">
+            <div class="service">
+                <i class="fas fa-soap"></i>
+                <h3>Dream Facial Wash</h3>
+                <p>Sabun cuci muka untuk membersihkan kulit wajah secara mendalam, cocok untuk kulit berminyak atau kering.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-tint"></i>
+                <h3>Dream Toner dan Moisturizer</h3>
+                <p>Toner untuk menyeimbangkan pH kulit dan moisturizer untuk hidrasi maksimal, mencegah kulit kering.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-box-open"></i>
+                <h3>Dream Barrier Set Bundle All in 6in1</h3>
+                <p>Paket lengkap perawatan kulit dengan 6 produk dalam satu set, termasuk serum dan masker.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-sun"></i>
+                <h3>Dream Sunscreen</h3>
+                <p>Tabir surya SPF 50 untuk melindungi kulit dari sinar UV, cocok untuk penggunaan sehari-hari.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-leaf"></i>
+                <h3>Dream Serum Vitamin C</h3>
+                <p>Serum dengan vitamin C untuk mencerahkan kulit dan mengurangi noda hitam.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-mask"></i>
+                <h3>Dream Night Mask</h3>
+                <p>Masker malam untuk regenerasi kulit saat tidur, memberikan hasil maksimal.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container" id="galeri">
+        <h2 style="text-align: center;"><i class="fas fa-camera"></i> Galeri Produk</h2>
+        <div class="gallery">
+            <img src="https://i.pinimg.com/736x/99/07/57/990757917a29ca23e92630ea05ac6151.jpg" alt="Produk Skincare 1">
+            <img src="https://i.pinimg.com/736x/5c/f3/99/5cf3993ef47bd18547ce0ea464c2b465.jpg" alt="Produk Skincare 2">
+            <img src="https://i.pinimg.com/736x/f8/34/6d/f8346dd0c504d21690743af73e8d2ff6.jpg" alt="Produk Skincare 3">
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="container">
+            <h2 style="text-align: center;">Testimoni Pelanggan</h2>
+            <div class="testimonial">
+                <p>"Layanan yang luar biasa! Sangat puas dengan hasilnya." - Customer Nala</p>
+            </div>
+            <div class="testimonial">
+                <p>"Profesional dan cepat. Akan datang lagi!" - Customer Aya</p>
+            </div>
+            <div class="testimonial">
+                <p>"Produknya alami dan efektif. Kulit saya lebih cerah!" - Customer Mirna</p>
+            </div>
+            <div class="testimonial">
+                <p>"Harga terjangkau untuk kualitas premium." - Customer Gesta</p>
+            </div>
+        </div>
+    </section>
+    <section class="faq container">
+        <h2 style="text-align: center;"><i class="fas fa-question-circle"></i> FAQ</h2>
+        <div>
+            <h3>Apakah produk ini cocok untuk semua jenis kulit?</h3>
+            <p>Ya, produk kami dirancang untuk berbagai jenis kulit, tapi kami sarankan konsultasi dulu jika Anda memiliki kondisi kulit spesifik.</p>
+        </div>
+        <div>
+            <h3>Bagaimana cara penggunaan produk?</h3>
+            <p>Ikuti instruksi pada kemasan. Untuk hasil terbaik, gunakan secara rutin pagi dan malam.</p>
+        </div>
+        <div>
+            <h3>Apakah ada garansi?</h3>
+            <p>Kami menawarkan garansi kepuasan 30 hari. Jika tidak puas, hubungi kami untuk pengembalian.</p>
+        </div>
+    </section>
+    <section class="container" id="kontak">
+        <h2 style="text-align: center;"><i class="fas fa-phone"></i> Kontak Kami</h2>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Nama Anda" required>
+                <input type="email" name="email" placeholder="Email Anda" required>
+                <textarea name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">Email: info@skincaredream.com<br>Telepon: +62 123 456 789<br>Alamat: Jakarta, Indonesia</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Skincare Dream. All rights reserved.</p>
+    </footer>
+</body>
+</html>
